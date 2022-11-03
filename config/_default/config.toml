@@ -1,4 +1,4 @@
-baseURL = "https://www.vasuper.co/" # The URL of your site.
+baseURL = "https://test.d25k6jlfowoa9d.amplifyapp.com/" # The URL of your site.
 title = "Vasuper's Site" # Title of your site
 theme = "zzo" # Name of Zzo theme folder in `themes/`.
 
