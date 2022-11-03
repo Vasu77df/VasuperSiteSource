@@ -1,5 +1,5 @@
 ---
-title: Building a Linux image using Yocto for [AMD Ryzen Embedded v1000 Series](https://www.amd.com/en/products/embedded-ryzen-v1000-series) SoCs with AWS SDKs, clients and software baked in.
+title: Building a Linux image using Yocto for AMD Ryzen Embedded v1000 Series SoCs with AWS stuff baked in.
 date: 2022-10-30T17:25:08-05:00
 draft: false
 ---
@@ -28,13 +28,13 @@ To follow the steps image build section, you will need:
 
 ## The Layers we’ll be using:
 
-### [Poky reference distribution layer](https://layers.openembedded.org/layerindex/branch/master/layer/meta-poky/):
+### Poky reference distribution layer:
 
-- The poky reference distribution layer is the common base for all yocto base builds.
+- The [poky reference distribution layer](https://layers.openembedded.org/layerindex/branch/master/layer/meta-poky/) is the common base for all yocto base builds.
 
 - You will want your poky layer branch to match the branches of all other third-party layers you download. You can view the available poky release names here: https://wiki.yoctoproject.org/wiki/Releases. We’re going to have all layers be on the `kirkstone` branch.
 
-### [meta-openembedded Layer](http://cgit.openembedded.org/meta-openembedded/tree/):
+### The meta-openembedded Layer:
 
 - This layer is going to help us to get features like networking , python, a filesystem, a desktop environment etc. below are the list of layers in [meta-openembedded](http://cgit.openembedded.org/meta-openembedded/tree/):
 ```bash
@@ -62,14 +62,14 @@ drwxr-xr-x 13 vasuper domain^users 4.0K Sep 27 08:27 meta-xfce
     - **meta-filesystem**
     - **meta-oe**
 
-### [meta-amd](https://git.yoctoproject.org/meta-amd/tree/) Layer:
-- The meta-amd layer contains Board Support Packages (and a distro) for ONLY selected AMD x86 boards. The list of supported features on each of these supported boards is available here: https://git.yoctoproject.org/cgit/cgit.cgi/meta-amd/tree/FEATURES.md.
+### The meta-amd Layer:
+- The [meta-amd](https://git.yoctoproject.org/meta-amd/tree/) layer contains Board Support Packages (and a distro) for ONLY selected AMD x86 boards. The list of supported features on each of these supported boards is available here: https://git.yoctoproject.org/cgit/cgit.cgi/meta-amd/tree/FEATURES.md.
 
 - You can learn about the amd architectures that are supported in this path `root/meta-amd-bsp/conf/machine` in the `meta-amd` layer.
 
-### [meta-aws](https://github.com/aws4embeddedlinux/meta-aws) Layer:
+### The meta-aws Layer:
 
-- **meta-aws** adds useful aws bits for AWS IoT:
+- [meta-aws](https://github.com/aws4embeddedlinux/meta-aws) adds useful aws bits for AWS IoT:
     - awscli
     - aws iot device client
     - aws iot GGv2
@@ -78,16 +78,14 @@ drwxr-xr-x 13 vasuper domain^users 4.0K Sep 27 08:27 meta-xfce
     - aws cloudwatch publisher
     - aws firecracker and more......
 
-### other layers that you might need or can add:
+### Other layers that you might need or can add:
 - [**meta-rtlwifi**](https://layers.openembedded.org/layerindex/branch/master/layer/meta-rtlwifi/) for realtek wifi cards
 - [**meta-virtualization**](https://layers.openembedded.org/layerindex/branch/master/layer/meta-virtualization/) for building Xen, KVM, Libvirt, and associated packages necessary for constructing OE-based virtualized solutions.
 - [**meta-dpdk**](https://layers.openembedded.org/layerindex/branch/master/layer/meta-dpdk/): Support layer for DPDK - a set of libraries and drivers for fast packet processing
 
 ## Setup:
 
-Make sure you have the build dependencies installed in the prerequistes mentioned above:
-
-### Download the build system and the meta-date layers:
+Make sure you have the build dependencies installed from the [prerequisites section](#prerequisites) mentioned above.
 
 Select the yocto branch (we’ll use the latest long term supported branch `kirkstone`)
 
@@ -211,4 +209,4 @@ You will be presented with a console (serial or graphical) or a
 graphical user interface depending on the image and the target machine.
 
 If your t640 has a serial port, you can watch the boot messages. Eventually Linux will start a console on this device (i.e. the serial port). You can use a terminal emulator (such as`minicom`) to monitor the messages coming out of the serial port of your t640 on your host build machine. In my case I plugged a serial-to-USB dongle into the t640 and my Linux host. On my Linux host the USB console device appears at `/dev/ttyUSB2`
-. Using `/dev/ttyUSB2` as the port in `minicom`, and setting the communication parameters to `115200 8N1`
+. Using `/dev/ttyUSB2` as the port in `minicom`, and setting the communication parameters to `115200 8N1`.
