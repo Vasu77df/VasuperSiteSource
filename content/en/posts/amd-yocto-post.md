@@ -1,5 +1,5 @@
 ---
-title: Building a Linux image using Yocto for [AMD Ryzen Embedded v1000 Series](https://www.amd.com/en/products/embedded-ryzen-v1000-series) SoCs with AWS SDKs, clients and software baked in.
+title: Building a Linux image using Yocto for AMD Ryzen Embedded v1000 Series SoCs with AWS SDKs, clients and software baked in.
 date: 2022-10-30T17:25:08-05:00
 draft: false
 ---
