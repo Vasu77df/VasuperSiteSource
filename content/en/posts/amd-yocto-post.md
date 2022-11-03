@@ -133,14 +133,9 @@ You might ask, what are these machine codes? These are the code names AMD uses f
 ```bash
 $ source ./oe-init-build-env build-amd-v1000-awsiot-kirkstone
 ```
-- Append or replace these these variables in local.conf or replace the local.conf from the one seen in this repo:
-```bash
-$ vim build-amd-v1000-awsiot-kirkstone/conf/local.conf
-DL_DIR ?= "\${TOPDIR}/../downloads"
-SSTATE_DIR ?= "\${TOPDIR}/../sstate-cache"
-MACHINE = "v1000"
-DISTRO = "poky-amd"
-```
+
+- Replace or edit accordingly the local.conf file from the one seen in this repo: https://github.com/Vasu77df/v1000-AMD-AWS-Yocto-Image 
+
 - add the required layers to the build configuration:
 ```bash 
 $ bitbake-layers add-layer ../meta-openembedded/meta-oe
@@ -151,7 +146,6 @@ $ bitbake-layers add-layer ../meta-aws
 $ bitbake-layers add-layer ../meta-amd/meta-amd-distro
 $ bitbake-layers add-layer ../meta-amd/meta-amd-bsp
 ```
-
 - Start the build, by building one of the supported images `core-image-base` or  `core-image-sato` . More on image types here:
     - [https://docs.yoctoproject.org/ref-manual/images.html#images](https://docs.yoctoproject.org/ref-manual/images.html#images)
     - I selected `core-image-sato` that uncludes x11 with the sato theme.
