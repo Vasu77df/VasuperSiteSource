@@ -304,7 +304,7 @@ We already have build an iso file. We can use that to create our raw disk image.
 #### create a new sparse disk image
 
 ```
-sudo dd if=/dev/zero of=mech-ztp.img bs=1 count=0 seek=400M 
+sudo dd if=/dev/zero of=custom-debian.img bs=1 count=0 seek=400M 
 ```
 
 ### partition the disk
