@@ -32,7 +32,7 @@ Create a directory where we will store all of the files we create throughout thi
 `mkdir -p $HOME/LIVE_BOOT`
 ```
 
-#  Bootstrap and Configure Debian 
+# Bootstrap and Configure Debian
 
  Set up the base Debian environment. I'm using `bullseye` for my distribution and `amd64` for the architecture. Consult the list of [debian mirrors](https://www.debian.org/mirror/list). 
 *Please change the URL in this command if there is a mirror that is closer to you.*
@@ -165,7 +165,7 @@ sudo umount $HOME/LIVE_BOOT/edit/sys
 sudo umount $HOME/LIVE_BOOT/edit/dev/pts
 sudo umount $HOME/LIVE_BOOT/edit/dev
 ```
-## Building the image with GRUB2 only
+## Building the image with GRUB2
 
 * * *
  Create directories that will contain files for our live environment and scratch files. 
@@ -295,7 +295,7 @@ xorriso \
         /EFI/efiboot.img=$HOME/LIVE_BOOT/scratch/efiboot.img
 ```
 
-## Making the raw disk image.
+## Making the raw disk image
 
 We would need a raw disk image to provide to vendors that they `dd` as a lot of manufacturers expect the image to be in this format for imaging clients on the factory floor
 
@@ -350,9 +350,7 @@ now you should have have a bootable raw disk image `custom-debian.img` , you can
 fdisk -l custom-debian.img
 ```
 
-### Some Tips and Tricks if you are building this on an EC2 instance.
-
-
+### Some Tips and Tricks if you are building this on an EC2 instance
 
 1. You need to run a `sudo apt update && apt upgrade` before installing the build tools on first EC2 provisioning or as the package has not been setup: 
 2. You need to provide your own resolv.conf as copying the resolv.conf from the host machine i.e the EC2 instance points to internal ec2 nameservers and wouldn’t work externally.
@@ -361,5 +359,5 @@ fdisk -l custom-debian.img
 5. The debian AMI ec2 instance doesn't have `parted` command installed. I've added `parted` to the prereqs build tools.
 
 
-## References:
+## References
 - https://www.willhaley.com/blog/custom-debian-live-environment-grub-only/ (major thanks to Will Haley for this guide)
