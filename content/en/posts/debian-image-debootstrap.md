@@ -321,7 +321,7 @@ sudo parted -s custom-debian.img print
 #### check which loop device we can use
 
 ```
-sudo losetup --show -f mech-ztp.img
+sudo losetup --show -f custom-debian.img
 # example output
 #/dev/loop15
 ```
