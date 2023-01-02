@@ -1,15 +1,15 @@
 baseURL = "https://www.vasuper.co/" # The URL of your site.
-title = "Vasuper's Site" # Title of your site
+title = "Vasuper's Alcove" # Title of your site
 theme = "zzo" # Name of Zzo theme folder in `themes/`.
 
 defaultContentLanguage = "en" # Default language to use (if you setup multilingual)
 defaultContentLanguageInSubdir = true # baseURL/en/, baseURL/kr/ ...
 hasCJKLanguage = false # Set `true` for Chinese/Japanese/Korean languages.
 
-summaryLength = 70 # The length of a post description on a list page.
+summaryLength = 30 # The length of a post description on a list page.
 buildFuture = true # if true, we can use future date for talks page
 
-copyright = "©{year}, All Rights Reserved" # copyright symbol: $copy; current year: {year}
+# copyright = "©{year}, All Rights Reserved" # copyright symbol: $copy; current year: {year}
 timeout = 10000
 enableEmoji = true
 paginate = 13 # Number of items per page in paginated lists.

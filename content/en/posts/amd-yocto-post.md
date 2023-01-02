@@ -1,5 +1,5 @@
 ---
-title: Building a Linux image using Yocto for AMD Ryzen Embedded v1000 Series SoCs with AWS stuff baked in.
+title: Building Yocto Based Linux Image for AMD Ryzen Embedded v1000 Series SoCs with AWS Agents installed.
 date: 2022-10-30T17:25:08-05:00
 draft: false
 ---
@@ -202,5 +202,4 @@ hard drive you selected during the installation process.
 You will be presented with a console (serial or graphical) or a
 graphical user interface depending on the image and the target machine.
 
-If your t640 has a serial port, you can watch the boot messages. Eventually Linux will start a console on this device (i.e. the serial port). You can use a terminal emulator (such as`minicom`) to monitor the messages coming out of the serial port of your t640 on your host build machine. In my case I plugged a serial-to-USB dongle into the t640 and my Linux host. On my Linux host the USB console device appears at `/dev/ttyUSB2`
-. Using `/dev/ttyUSB2` as the port in `minicom`, and setting the communication parameters to `115200 8N1`.
+If your t640 has a serial port, you can watch the boot messages. Eventually Linux will start a console on this device (i.e. the serial port). You can use a terminal emulator (such as`minicom`) to monitor the messages coming out of the serial port of your t640 on your host build machine.In my case I plugged in a serial-to-USB dongle into the t640 and my Linux host. On my Linux host the USB console device appears at `/dev/ttyUSB2`. Using `/dev/ttyUSB2` as the port in `minicom`, and setting the communication parameters to `115200 8N1`.

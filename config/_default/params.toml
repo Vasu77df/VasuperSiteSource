@@ -1,20 +1,20 @@
 logoText = "Vasuper's Alcove" # Logo text that appears in the site navigation bar.
 logoType = "short" # long, short -> short: squre shape includes logo text, long: rectangle shape not includes logo text
-logo = true # Logo that appears in the site navigation bar.
-description = "The Zzo theme for Hugo example site." # for SEO
+logo = false # Logo that appears in the site navigation bar.
+description = "Vasudevan Perumal's personal blog on tech, and stuff" # for SEO
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 useFaviconGenerator = true # https://www.favicon-generator.org/
 languagedir = "ltr" # ltr / rtl
 
-themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"] # select options for site color theme
+themeOptions = ["light","dark", "hacker", "solarized", "kimbie"] # select options for site color theme
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase"] # not allowed page types in home page. type can be set in front matter or default to folder name.
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"] # not allowed page types in home page sidebar(recent post titles).
 notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 enablePinnedPosts = true # show pinned posts first in the main view
 
-viewportSize = "normal" # widest, wider, wide, normal, narrow
+viewportSize = "widest" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
@@ -35,12 +35,12 @@ enableThemeChange = true # site color theme
 
 # body
 enableBreadcrumb = true # breadcrumb for list, single page
-enableSearch = true # site search with Fuse
+enableSearch = false # site search with Fuse
 enableSearchHighlight = true # when true, search keyword will be highlighted
 enableGoToTop = true # scroll to top
 enableWhoami = true # at the end of single page
 summaryShape = "classic" # card, classic, compact
-archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+archiveGroupByDate = "2022" # "2006-01": group by month, "2006": group by year
 archivePaginate = 13 # items per page
 paginateWindow = 1 # setting it to 1 gives 7 buttons, 2 gives 9, etc. If set 1: [1 ... 4 5 6 ... 356] [1 2 3 4 5 ... 356] etc
 talksPaginate = 8 # items per page
@@ -50,15 +50,15 @@ talksGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 myname = "Vasudevan Perumal"
 email = "vasu3797@gmail.com"
 whoami = "System Development Engineer"
-bioImageUrl = "" # image url like "http//..." or "images/anyfoldername/mybioimage.jpg" If not set, we find a avatar image in root/static/images/whoami/avatar.(png|jpg|svg)
+bioImageUrl = "images/profile/smallerprofile.jpg" # image url like "http//..." or "images/anyfoldername/mybioimage.jpg" If not set, we find a avatar image in root/static/images/whoami/avatar.(png|jpg|svg)
 useGravatar = false # we use this option highest priority
 location = "Austin, Texas"
-organization = "Amazon"
+organization = "Amazon.com"
 link = "https://github.com/Vasu77df"
 
 # sidebar
 enableBio = true # in home page sidebar
-enableBioImage = true # in home page sidebar
+enableBioImage = false # in home page sidebar
 enableSidebar = true # Set to false to create the full width of the content.
 enableSidebarTags = true # if you want to use tags.
 enableSidebarSeries = true
@@ -76,10 +76,10 @@ tocLevels = ["h2", "h3", "h4"] # minimum h2, maximum h4 in your article
 enableSidebarPostsByOrder = false # another lists in the sidebar
 
 # footer
-showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
-showFeedLinks = true # RSS Feed 
+showPoweredBy = false # show footer text: Powered by Hugo and Zzo theme
+showFeedLinks = false # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
-enableLangChange = true # show button at bottom left of footer.
+enableLangChange = false # show button at bottom left of footer.
 
 # service
 googleTagManager = "" # GTM-XXXXXX
@@ -139,13 +139,13 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions] # if set, social icons will show up.
-  email = "mailto:your@email.com"
+  email = "mailto:vasu3797@email.com"
   phone = ""
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
-  github = "https://github.com/zzossig/hugo-theme-zzo"
+  facebook = "https://www.facebook.com/vasudevan.perumal.319"
+  twitter = "https://twitter.com/Vasu_perumal"
+  github = "https://github.com/Vasu77df"
   stack-overflow = ""
-  instagram = ""
+  instagram = "https://www.instagram.com/vasu_perumal"
   google-plus = ""
   youtube = ""
   medium = ""
