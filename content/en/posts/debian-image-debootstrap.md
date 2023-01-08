@@ -1,12 +1,17 @@
 ---
 title: "Build your own Customized Live Debian Distro using Debootstrap"
+author: "Vasu"
+socialOptions:
+    email: "mailto:vasu3797@gmail.com"
+    twitter: "https://twitter.com/Vasu_perumal"
+    github: "https://github.com/Vasu77df"
 date: 2023-01-02T08:23:29-06:00
 draft: false
 ---
 
 In this guide, we'll be going over the steps involved to build a live Debian distribution using debootstrap with both legacy BIOS and UEFI boot support using GRUB2. Why build your own distribution, you ask? There are scenarios and use cases that necessitate packages, certificates or other artifacts are already installed in the OS Image that's distributed in the machines that are shipped, this guide will go over the steps involved to build that image.
 
-# Prerequisites
+## Prerequisites
 
 Let's begin by installing the build tools.
 
@@ -32,7 +37,7 @@ Create a directory where we will store all of the files we create throughout thi
 `mkdir -p $HOME/LIVE_BOOT`
 ```
 
-# Bootstrap and Configure Debian
+## Bootstrap and Configure Debian
 
  Set up the base Debian environment. I'm using `bullseye` for my distribution and `amd64` for the architecture. Consult the list of [debian mirrors](https://www.debian.org/mirror/list). 
 *Please change the URL in this command if there is a mirror that is closer to you.*
@@ -131,7 +136,7 @@ openssl x509 -in /etc/pki/AmazonRootCA1.pem -text -noout
 ```
 
 
-**[chroot] Cleaning up**
+**[chroot]** Cleaning up
 
 ```
 apt-get clean
@@ -141,8 +146,7 @@ apt-get autoremove
 rm -rf /tmp/* ~/.bash_history
 ```
 
-**[chroot] Adding a user and setting  password for root
-**
+**[chroot]** Adding a user and setting  password for root**
 Make sure to change this and not use the default.
 You can generated salted passwords using this command
 ```
@@ -155,8 +159,7 @@ $6$pass$75vTrf3kWE4ncL.vF1TixnLx7qs34pt3tlgm/6uXOhccJXsb9LrY.d3izKxAYnzlRvRwkolg
 user
 ```
 
-**[chroot] Exit chroot and un-mount all special directories
-**
+**[chroot]** Exit chroot and un-mount all special directories
 
 ```
 exit
@@ -301,13 +304,13 @@ We would need a raw disk image to provide to vendors that they `dd` as a lot of 
 
 We already have build an iso file. We can use that to create our raw disk image.
 
-#### create a new sparse disk image
+### Create a new sparse disk image
 
 ```
 sudo dd if=/dev/zero of=custom-debian.img bs=1 count=0 seek=400M 
 ```
 
-### partition the disk
+### Partition the disk
 
 ```
 sudo parted -s custom-debian.img mklabel gpt 
@@ -318,7 +321,7 @@ sudo parted --script custom-debian.img set 1 boot on
 sudo parted -s custom-debian.img print
 ```
 
-#### check which loop device we can use
+### Check which loop device we can use
 
 ```
 sudo losetup --show -f custom-debian.img
@@ -326,19 +329,19 @@ sudo losetup --show -f custom-debian.img
 #/dev/loop15
 ```
 
-#### create loop device
+### Create loop device
 
 ```
 sudo losetup -P /dev/loop15 custom-debian.img
 ```
 
-#### write iso to loop device, which writes to raw disk
+### Write iso to loop device, which writes to raw disk
 
 ```
 sudo dd if=custom-debian-distro.iso of=/dev/loop15 
 ```
 
-#### cleanup the loop device
+### Cleanup the loop device
 
 ```
 sudo losetup -d /dev/loop15
