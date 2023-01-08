@@ -1,5 +1,10 @@
 ---
 title: Building Yocto Based Linux Image for AMD Ryzen Embedded v1000 Series SoCs with AWS Agents installed.
+author: "Vasu"
+socialOptions:
+    email: "mailto:vasu3797@gmail.com"
+    twitter: "https://twitter.com/Vasu_perumal"
+    github: "https://github.com/Vasu77df"
 date: 2022-10-30T17:25:08-05:00
 draft: false
 ---
