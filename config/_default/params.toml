@@ -139,7 +139,11 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions] # if set, social icons will show up.
+<<<<<<< HEAD
   email = "mailto:vasu3797@gmail.com"
+=======
+  email = "mailto:vasu3797@email.com"
+>>>>>>> test
   phone = ""
   facebook = "https://www.facebook.com/vasudevan.perumal.319"
   twitter = "https://twitter.com/Vasu_perumal"
@@ -150,7 +154,7 @@ commento = false
   youtube = ""
   medium = ""
   tumblr = ""
-  linkedin = ""
+  linkedin = "https://www.linkedin.com/in/vasudevanperumal/"
   pinterest = ""
   stack-exchange = ""
   telegram = ""

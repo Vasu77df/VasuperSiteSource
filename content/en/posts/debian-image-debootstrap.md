@@ -3,16 +3,17 @@ title: "Build your own Customized Live Debian Distro using Debootstrap"
 author: "Vasu"
 socialOptions:
     email: "mailto:vasu3797@gmail.com"
+    linkedin: "https://www.linkedin.com/in/vasudevanperumal/"
     twitter: "https://twitter.com/Vasu_perumal"
     github: "https://github.com/Vasu77df"
 date: 2023-01-02T08:23:29-06:00
 draft: false
 ---
 
-In this guide, we'll be going over the steps involved to build a live Debian distribution using debootstrap with both legacy BIOS and UEFI boot support using GRUB2. Why build your own distribution, you ask? There are scenarios and use cases that necessitate packages, certificates or other artifacts are already installed in the OS Image that's distributed in the machines that are shipped, this guide will go over the steps involved to build that image.
+In this guide, we'll be going over the steps involved to build a LiveCD Debian distribution using debootstrap with both legacy BIOS and UEFI boot support using GRUB2. Why build your own distribution, you ask? 
+There are scenarios and use cases that necessitate packages, certificates or other artifacts are already installed in the OS Image that's distributed in the machines that are shipped, this guide will go over the steps involved to build that image.
 
 ## Prerequisites
-
 
 Let's begin by installing the build tools.
 
@@ -35,7 +36,7 @@ sudo apt install \
 Create a directory where we will store all of the files we create throughout this guide. 
 
 ```
-`mkdir -p $HOME/LIVE_BOOT`
+mkdir -p $HOME/LIVE_BOOT
 ```
 
 ## Bootstrap and Configure Debian
@@ -52,7 +53,7 @@ sudo debootstrap \
 ```
 
 ### Copy resolver settings 
-We're copying the dns resolver settings from the host to the root filesystem of the image we are building so that we can resolve dns request while within the chroot environment we'll be pivoting into in the next step.
+We're copying the DNS resolver settings from the host to the root filesystem of the image we are building so that we can resolve DNS request while within the [chroot](https://en.wikipedia.org/wiki/Chroot) that we'll be pivoting into in the next step.
 ```
 sudo mkdir -p $HOME/LIVE_BOOT/edit/run/systemd/resolve
 sudo cp -f /etc/resolv.conf $HOME/LIVE_BOOT/edit/run/systemd/resolve/stub-resolv.conf
@@ -65,13 +66,13 @@ sudo mount -t proc /proc $HOME/LIVE_BOOT/edit/proc
 sudo mount -t sysfs /sys $HOME/LIVE_BOOT/edit/sys
 sudo mount -o bind /dev $HOME/LIVE_BOOT/edit/dev
 sudo mount -o bind /dev/pts $HOME/LIVE_BOOT/edit/dev/pts
-`sudo chroot $HOME``/``LIVE_BOOT``/``edit` /bin/bash
+sudo chroot $HOME/LIVE_BOOT/edit /bin/bash
 export HOME=/root
 export LC_ALL=C
 ```
 ****[chroot]**** Set a custom hostname for your Debian environment. 
 ```
-`echo ``"custom-debian-machine"`` ``>`` ``/etc/``hostname`
+echo "custom-debian-machine" > /etc/hostname
 ```
 ****[chroot]**** add hostname to hosts file and update the nameservers
 
@@ -92,7 +93,7 @@ nameserver 1.1.1.1
 EOF
 ```
 
-****[chroot]**** Install a Linux kernel of your choosing. I chose the image `linux-image-amd64`. We also install `live-boot` which provides the necessary hooks for live system. We install `systemd-sys` (or an equivalent) as it's necessary for an init system. Let's install someother packages we might need in our distribution. You can also add packages to this list to get installed as part of the image you are building, allowing you to further customize the image to include software you want to distribute with your distro.
+****[chroot]**** Install a Linux kernel of your choosing. I chose the image `linux-image-amd64`. We also install `live-boot` which provides the necessary hooks for LiveCD system. We install `systemd-sysv` (or an equivalent) as it's necessary for an init system. Let's install some other packages we might need in our distribution. You can also add packages to this list to get installed as part of the image you are building, allowing you to further customize the image to include software you want to distribute with your distro.
 ```
 apt update && \
 apt install --no-install-recommends \
@@ -119,12 +120,12 @@ iputils-ping
 This is a MQTT agent that facilitates a lot IoT based interactions with cloud-services or your local MQTT based IoT platform. This step can be ignores if you don't have this requirement.
 
 ```
-`wget http``:``//repo.mosquitto.org/debian/mosquitto-repo.gpg.key`
-`apt``-``key add ``mosquitto``-``repo``.``gpg``.``key`
+wget http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key
+apt-key add mosquitto-repo.gpg.key
 
-`apt``-``get`` update
-apt-get install mosquitto`
-`apt``-``get`` install mosquitto``-``clients`
+apt-get update
+apt-get install mosquitto
+apt-get install mosquitto-clients
 ```
 
 **[chroot] Downloading the AmazonRootCA.pem**
@@ -303,7 +304,7 @@ xorriso \
 
 We would need a raw disk image to provide to vendors that they `dd` as a lot of manufacturers expect the image to be in this format for imaging clients on the factory floor
 
-We already have build an iso file. We can use that to create our raw disk image.
+We already have built an iso file. We can use that to create our raw disk image.
 
 ### Create a new sparse disk image
 
