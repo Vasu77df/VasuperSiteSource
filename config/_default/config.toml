@@ -1,4 +1,4 @@
-baseURL = "https://www.vasuper.co/" # The URL of your site.
+baseURL = "https://www.vasuper.info/" # The URL of your site.
 title = "Vasuper's Alcove" # Title of your site
 theme = "zzo" # Name of Zzo theme folder in `themes/`.
 
