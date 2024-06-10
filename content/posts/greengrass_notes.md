@@ -3,10 +3,11 @@ title: "Notes on AWS Greengrass"
 date: 2024-06-09
 description: "These are my notes on AWS IoT Greengrass"
 type: "post"
-tags: ["aws"]
+showTableOfContents: true
+tags: ["aws", greengrass, "iot"]
 ---
 
-## Listing basic Greengrass Concepts
+#Greengrass Concepts Basics
 
 GG is a edge runtime with a deployment and management mechanism for the egde runtime
 
@@ -25,12 +26,12 @@ GG is a edge runtime with a deployment and management mechanism for the egde run
 - **Artifacts**: The source code, binaries, or scripts
 - **Dependency**: The relationship between components that enable you to enfore automatic updates or restarts of dependent components. 
 
-**Greengrass Core Software**: 
+## Greengrass Core Software 
 The set of al greengrass software that you install on a core device. 
 - **Nucleus**: The required component that provides the minimum functionality of the aws iot greengrass core software. The nucleus manages deployment, orchestration, and lifecycle management of other components. 
 - **Optional components**: Configurable components
 
-**Features of AWS IoT Greengrass**:
+## Features of AWS IoT Greengrass
 
 - Software distributions
 	- Nucleus
@@ -43,7 +44,7 @@ The set of al greengrass software that you install on a core device.
 	- API
 	- Console
 
-**GG Core Software Features**:
+## GG Core Software Features:
 - Process data streams on local device and automatic export to AWS Cloud
 - MQTT messaging between AWS IoT and components
 - Support local publish and subcribe messaging between components
@@ -52,4 +53,27 @@ The set of al greengrass software that you install on a core device.
 - Perform secure OTA updates of core software and custom components
 - Provide secure, encrypted storage of local secrets and controlled access by components.
 - Secure connections between devices and aws cloud with device auth
+
+## My thoughts on Greengrass Components vs AWS IoT jobs
+
+AWS IoT jobs is the right tool to use for IFTTT type operations. 
+AWS IoT Job is akin to ansible playbooks.
+
+A Greengrass Components is right tool to use
+	a. To package your software, in it's supported formats.
+	b. To deploy said software.
+A Greengrass component is akin to docker-compose.
+
+IoT jobs is the right tool to use to run a task(OS upgrades are tasks), as it has in-built mechanisms of state management that we would have to re-invent with a  Greengrass component. For now we expect state management of an OS upgrade as a simple 3 step process, but this state complexity might grow in the long run.
+
+If we define, a Greengrass component in such a manner to run a task, we are not using Greengrass components for what it was intended to do. Which is alright, if we really have to pick one or the other. But as we have the ability to choose right tool for the job, we should use IoT jobs to run tasks.
+
+From a pipelines or orchestrator perspective, it may seem like it simplification if we use only one specific mechanism to run tasks on a device, but from device lifecycle perspective, IoT jobs and Greengrass components are completely different things with different purposes.
+
+IoT jobs will be recommended interface for customers to define and deploy one-off or even continuous tasks on the device. Greengrass components, will be recommended interface to deploy applications, and maintain it's lifecycle. This is how I look at this, I understand both mechanisms can be altered to either of the operations, but if that mechanism increases in complexity, the author as to be very aware of what they are doing.
+
+
+
+
+
 
