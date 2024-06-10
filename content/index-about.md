@@ -1,0 +1,1 @@
+Hello, Welcome to my blog! This is where I post about random things I find interesting. I also take a lot of notes, that I post those here as well, these notes may not be up to date, and are opinionated from my perspective. My hope in posting these notes here is that, it might help you fellow internet surfer, on the same topic.

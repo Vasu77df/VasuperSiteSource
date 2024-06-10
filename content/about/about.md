@@ -1,11 +1,9 @@
 ---
 title: About me
 author: "Vasu"
-socialOptions:
-    email: "mailto:vasu3797@gmail.com"
-    twitter: "https://twitter.com/Vasu_perumal"
-    github: "https://github.com/Vasu77df"
+date: 2024-06-09
 draft: false
+type: post
 ---
 
 I think the best way to introduce myself and share what I am about, is by sharing what I love doing. I love to learn about how things work. I love to deep-dive, breakdown, and analyze, how a thing, a mechanism, or a process works and build upon them where I can. This proclivity applies to everything I do, for example, I find myself watching behind the scenes of movies than the movies themselves.

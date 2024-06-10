@@ -1,54 +1,89 @@
-baseURL = "https://www.vasuper.info/" # The URL of your site.
-title = "Vasuper's Alcove" # Title of your site
-theme = "zzo" # Name of Zzo theme folder in `themes/`.
+baseURL = "https://www.vasuper.info/"
+defaultContentLanguage = "en"
+languageCode = "en"
 
-defaultContentLanguage = "en" # Default language to use (if you setup multilingual)
-defaultContentLanguageInSubdir = true # baseURL/en/, baseURL/kr/ ...
-hasCJKLanguage = false # Set `true` for Chinese/Japanese/Korean languages.
+title = "Vasuper's Alcove"
 
-summaryLength = 30 # The length of a post description on a list page.
-buildFuture = true # if true, we can use future date for talks page
+theme = "gokarna"
 
-# copyright = "©{year}, All Rights Reserved" # copyright symbol: $copy; current year: {year}
-timeout = 10000
-enableEmoji = true
-paginate = 13 # Number of items per page in paginated lists.
-rssLimit = 100
+# Automatically generate robots.txt
+enableRobotsTXT = true
 
-enableGitInfo = false # When true, the modified date will appear on a summary and single page. Since GitHub info needs to be fetched, this feature will slow down to build depending on a page number you have
-googleAnalytics = ""
+[menu]
+  [[menu.main]]
+    # Unique identifier for a menu item
+    identifier = "posts"
+
+    url = "/posts/"
+    
+    # You can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+
+    # You can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+
+    # Display name
+    name = "Posts"
+
+    # Weights are used to determine the ordering
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+    
+  [[menu.main]]
+    identifier = "github"
+    url = "https://github.com/Vasu77df"
+    weight = 3
+    
+    # We use feather-icons: https://feathericons.com/
+    pre = "<span data-feather='github'></span>"
+
+  [[menu.main]]
+    identifier = "linkedin"
+    url = "https://linkedin.com/in/vasudevanperumal/"
+    weight = 4
+    
+    # We use feather-icons: https://feathericons.com/
+    pre = "<span data-feather='linkedin'></span>"
+
+[params]
+  # URL for the avatar on homepage
+  avatarURL = "/android-chrome-512x512.png"
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+  avatarSize = "size-m"
+
+  # Description to display on homepage
+  description = "Systems, Linux, Philosophy, Business, and other Random Stuff"
+
+  # Accent color is displayed when you hover over <a> tags
+  accentColor = "#fab387"
+
+  # Display "back to top" button on posts
+  ShowBackToTopButton = true
+
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
+
+  # Keywords relevant for SEO
+  metaKeywords = ["blog", "linux", "ubuntu", "amazon", "operating systems", "fedora", "systemd"]
+
+  # If you want to display posts on the homepage, the options are
+  # "popular" (order posts by weight), "recent" (order posts by date)
+  # or "" (do not display, default option)
+  showPostsOnHomePage = "recent"
+
+  # Footer text
+  footer = "Forty Two is the answer!"
+
+  dateFormat = "2 January, 2006"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      hardWraps = true
-      unsafe = true
-      xHTML = true
-  [markup.highlight]
-    codeFences = true
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
   [markup.tableOfContents]
+    startLevel = 1
     endLevel = 3
     ordered = false
-    startLevel = 2
-
-[outputs]
-  home = ["HTML", "RSS", "SearchIndex"]
-  section = ["HTML", "RSS", "SearchIndex"]
-  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
-  taxonomy = ["HTML", "RSS", "SearchIndex"]
-
-[outputFormats]
-  [outputFormats.SearchIndex]
-    mediaType = "application/json"
-    baseName = "index"
-    isPlainText = true
-    notAlternative = true
-    
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
-
