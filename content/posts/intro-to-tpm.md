@@ -8,7 +8,11 @@ showTableOfContents: true
 
 # Intro to Trusted Platform Modules(TPM) Notes
 
-Source Material: https://courses.cs.vt.edu/cs5204/fall10-kafura-BB/Papers/TPM/Intro-TPM-2.pdf
+---
+These are my notes taken from learning about TPM from this source material: https://courses.cs.vt.edu/cs5204/fall10-kafura-BB/Papers/TPM/Intro-TPM-2.pdf 
+
+These are just excerpts and notes, that I have captured for my recollection and understanding, from that this chapter.
+---
 
 A common design goal across this diversity however, is the provision of some degree of secure processing, implemented in secure hardware.
 
