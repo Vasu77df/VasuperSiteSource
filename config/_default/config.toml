@@ -2,7 +2,7 @@ baseURL = "https://www.vasuper.info/"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-title = "Vasuper's Alcove"
+title = "Vasuper's Blog"
 
 theme = "gokarna"
 
@@ -57,7 +57,7 @@ enableRobotsTXT = true
   avatarSize = "size-m"
 
   # Description to display on homepage
-  description = "Systems, Linux, Philosophy, Business, and other Random Stuff"
+  description = "Linux, Systems, Philosophy, Business, and other Random Stuff"
 
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#fab387"
@@ -70,7 +70,7 @@ enableRobotsTXT = true
   customHeadHTML = ""
 
   # Keywords relevant for SEO
-  metaKeywords = ["blog", "linux", "ubuntu", "amazon", "operating systems", "fedora", "systemd"]
+  metaKeywords = ["blog", "linux", "ubuntu", "amazon", "operating systems", "fedora", "systemd", "aws", "tpm"]
 
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)

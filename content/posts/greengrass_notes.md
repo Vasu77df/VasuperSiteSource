@@ -1,13 +1,13 @@
 ---
-title: "Notes on AWS Greengrass"
+title: "My notes on AWS Greengrass"
 date: 2024-06-09
 description: "These are my notes on AWS IoT Greengrass"
 type: "post"
 showTableOfContents: true
-tags: ["aws", greengrass, "iot"]
+tags: ["aws", "greengrass", "iot"]
 ---
 
-#Greengrass Concepts Basics
+# Greengrass Concepts Basics
 
 GG is a edge runtime with a deployment and management mechanism for the egde runtime
 
@@ -56,6 +56,8 @@ The set of al greengrass software that you install on a core device.
 
 ## My thoughts on Greengrass Components vs AWS IoT jobs
 
+_At work, we are working on a remote OS update mechanism for our custom downstream ubuntu distro that updates atomically through a image-based update mechanism. The actual OS updates i.e downloading an update bundle and writing it to disk is managed the [RAUC](https://rauc.io/). These are my notes taken while evaluating whether to use Greengrass Components or IoT jobs to remotely trigger this agent, in hindsight's it's clear IoT jobs is the appropriate mechanism, but these notes depict how I got to that decision._
+
 AWS IoT jobs is the right tool to use for IFTTT type operations. 
 AWS IoT Job is akin to ansible playbooks.
 
@@ -68,7 +70,7 @@ IoT jobs is the right tool to use to run a task(OS upgrades are tasks), as it ha
 
 If we define, a Greengrass component in such a manner to run a task, we are not using Greengrass components for what it was intended to do. Which is alright, if we really have to pick one or the other. But as we have the ability to choose right tool for the job, we should use IoT jobs to run tasks.
 
-From a pipelines or orchestrator perspective, it may seem like it simplification if we use only one specific mechanism to run tasks on a device, but from device lifecycle perspective, IoT jobs and Greengrass components are completely different things with different purposes.
+From CI/CD pipelines or orchestrator perspective, it may seem like it simplification if we use only one specific mechanism to run tasks on a device, but from device lifecycle perspective, IoT jobs and Greengrass components are completely different things with different purposes.
 
 IoT jobs will be recommended interface for customers to define and deploy one-off or even continuous tasks on the device. Greengrass components, will be recommended interface to deploy applications, and maintain it's lifecycle. This is how I look at this, I understand both mechanisms can be altered to either of the operations, but if that mechanism increases in complexity, the author as to be very aware of what they are doing.
 

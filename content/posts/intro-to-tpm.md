@@ -1,17 +1,18 @@
 ---
-title: "Intro to Tpm"
+title: "My notes on the Trusted Platform Module"
 date: 2024-06-10T03:25:52Z
-draft: false
-type: post
+description: "Notes on the basic concepts of trusted compute, the TPM architecture and features"
+type: "post"
 showTableOfContents: true
+tags: ["trusted compute", "tpm"]
 ---
 
-# Intro to Trusted Platform Modules(TPM) Notes
-
 ---
-These are my notes taken from learning about TPM from this source material: https://courses.cs.vt.edu/cs5204/fall10-kafura-BB/Papers/TPM/Intro-TPM-2.pdf 
+These are my notes taken from learning about TPMs from this source material: https://courses.cs.vt.edu/cs5204/fall10-kafura-BB/Papers/TPM/Intro-TPM-2.pdf
 
-These are just excerpts and notes, that I have captured for my recollection and understanding, from that this chapter.
+These are just excerpts and notes, that I have captured for my recollection and understanding, from the chapter
+
+
 ---
 
 A common design goal across this diversity however, is the provision of some degree of secure processing, implemented in secure hardware.
