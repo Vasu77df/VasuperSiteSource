@@ -79,10 +79,12 @@ params:
     Content: Welcome to my blog, where I write about all the random things I come across
 
   socialIcons:
-    - name: x
-      url: "https://x.com/Vasu_perumal"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/vasudevanperumal/"
     - name: github
       url: "https://github.com/Vasu77df"
+    - name: x
+      url: "https://x.com/Vasu_perumal"
 
   analytics:
     google:
