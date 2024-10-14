@@ -1,10 +1,8 @@
 ---
-title: "Build your own Customized Live Debian Distro using Debootstrap"
-author: "Vasu"
+title: Build your own Customized Live Debian Distro using Debootstrap
+author: Vasu
 date: 2023-01-02T08:23:29-06:00
 draft: false
-type: post
-showTableOfContents: true
 ---
 
 In this guide, we'll be going over the steps involved to build a LiveCD Debian distribution using debootstrap with both legacy BIOS and UEFI boot support using GRUB2. Why build your own distribution, you ask? 

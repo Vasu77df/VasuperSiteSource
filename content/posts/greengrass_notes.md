@@ -1,10 +1,8 @@
 ---
-title: "My notes on AWS Greengrass"
-date: 2024-06-09
-description: "These are my notes on AWS IoT Greengrass"
-type: "post"
-showTableOfContents: true
-tags: ["aws", "greengrass", "iot"]
+title: My Notes while learning about Greengrass
+author: Vasu
+date: 2024-06-09T17:25:08-05:00
+draft: false
 ---
 
 # Greengrass Concepts Basics
