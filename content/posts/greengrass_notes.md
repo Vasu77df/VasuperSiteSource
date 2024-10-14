@@ -2,6 +2,7 @@
 title: My Notes while learning about Greengrass
 author: Vasu
 date: 2024-06-09T17:25:08-05:00
+tags: ["AWS", "IOT", "systems", "edge compute"]
 draft: false
 ---
 

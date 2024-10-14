@@ -2,6 +2,7 @@
 title: Build your own Customized Live Debian Distro using Debootstrap
 author: Vasu
 date: 2023-01-02T08:23:29-06:00
+tags: ["Linux", "Debian", "OS", "Operating Systems"]
 draft: false
 ---
 

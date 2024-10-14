@@ -2,6 +2,7 @@
 title: My notes on the Trusted Platform Module
 date: 2024-06-10T03:25:52Z
 description: Notes on the basic concepts of trusted compute, the TPM architecture and features
+tags: ["TPM", "Trusted Compute", "systems"]
 draft: false
 ---
 
