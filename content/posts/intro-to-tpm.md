@@ -1,5 +1,5 @@
 ---
-title: My notes on the Trusted Platform Module
+title: My notes on the Trusted Platform Modules
 date: 2024-06-10T03:25:52Z
 description: Notes on the basic concepts of trusted compute, the TPM architecture and features
 tags: ["TPM", "Trusted Compute", "systems"]
@@ -10,7 +10,6 @@ draft: false
 These are my notes taken from learning about TPMs from this source material: https://courses.cs.vt.edu/cs5204/fall10-kafura-BB/Papers/TPM/Intro-TPM-2.pdf
 
 These are just excerpts and notes, that I have captured for my recollection and understanding, from the chapter
-
 
 ---
 
