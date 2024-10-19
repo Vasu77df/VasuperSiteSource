@@ -8,7 +8,7 @@ draft: false
 
 ## 1. Motivation
 
-I wanted to put up a small snippet of code I did at work as a project on my Github, as it seemed like a common usage pattern that other folks can use of-the-shelf or copy from. Ain't that the spirit of open source?
+I wanted to put up a small snippet of code I did at work as a public github project, as it seemed like a common usage pattern that other folks can use of the shelf or copy from. 
 
 Within Amazon, we have our own python project management and dependency management tooling that automates away a lot of the boilerplate setup in defining and distributing a Python project. 
 
@@ -43,15 +43,15 @@ I ended up choosing `uv`, for the following reasons.
 - It has some utility functions to manage caches.
 - uv advertises to be 10 to 100x faster than pip, and in my experience just downloading and adding dependencies really has been a lot faster than pip.
 
-My analysis was not purely a technical one, but was driven more on what I thought was easy to use, and partially driver by the media hype when the tool was portrayed as an pip replacement.
+My analysis was not purely a technical one, but was driven more on what I thought was easy to use. Another partial driver was the media hype when the tool was portrayed as an pip replacement. I wanted to check out what the hype is.
 
 ---
 
 ## 3. Installing uv 
 
-The UV project has got a standalone installer linked below, it's as simple of running it to install uv.
+The `uv` project has got a standalone installer linked below, it's as simple of running it to install `uv`.
 
-> Its, always recommended to download and review scripts downloaded from the internet before running them.
+> It's, always recommended to download and review scripts downloaded from the internet before running them.
 > Maybe skip the pipe and add a -o to your curl and glance quickly if everything is dandy.
 
 - https://docs.astral.sh/uv/getting-started/installation/
@@ -60,7 +60,7 @@ The UV project has got a standalone installer linked below, it's as simple of ru
 
 ## 4. Setting up a project
 
-I am working on building a CLI tool, and I want to setup my project as an application that can be packaged, and potentially just `pipx` installed or maybe `uv` installed.
+I am working on building a CLI tool, and I want to setup my project as an application that can be packaged, and potentially just `pipx` installed (or maybe `uv` installed).
 
 To init such a project run:
 
@@ -186,7 +186,7 @@ uv run pytest
 
 ## 7. Freezing an environment
 
-`uv` creates a `uv.lock file that acts as an cross platform lock file, which contains the exact resolved versions that are installed in the project environment. This can be committed source control to provide consistent and reproducible installation on different machines.
+`uv` creates a `uv.lock` file that acts as an cross platform lock file, which contains the exact resolved versions that are installed in the project environment. This can be committed source control to provide consistent and reproducible installation on different machines.
 
 You can also lock the dependencies declared in `pyproject.toml` into a `requirements.txt` with this command:
 
