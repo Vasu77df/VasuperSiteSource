@@ -236,3 +236,7 @@ You can setup a PyPI token with `--token` or `UV_PUBLISH_TOKEN`, or set a userna
 `uv` is a really fast python management tool, and it's user experience is pretty good. I would recommend it for folks looking for a tool to fit a similar need. In the next post I'll share what I built and managed with `uv`.
 
 ---
+
+## References
+- https://astral.sh/blog/uv-unified-python-packaging
+- https://docs.astral.sh/uv/
