@@ -19,6 +19,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Vasu's Va-super Blog
+  social: true
   description: "Blog of Vasudevan Perumal"
   keywords: [Blog, Portfolio]
   author: Me
