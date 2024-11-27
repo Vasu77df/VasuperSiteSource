@@ -108,8 +108,10 @@ Now it's as simple as making these calls and capturing the details during OS bui
 
 To do so I setup a very simple python CLI tool that I can invoke adhoc or within my CodeBuild project running the OS build job. 
 - https://github.com/Vasu77df/ecrimagemetadataextractor/tree/main
+
 You can get the wheel of this package from my release 
 - https://github.com/Vasu77df/ecrimagemetadataextractor/releases
+
 Or you can use the uv package manager to install, to learn more about uv checkout my post [here](https://www.vasuper.net/posts/using_uv/)
 
 With this simple CLI tool I can run this before my actually task , and not really affect the task's run time in a meaningful manner
