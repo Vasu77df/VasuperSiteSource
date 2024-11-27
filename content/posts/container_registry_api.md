@@ -144,7 +144,7 @@ options:
 ecrimagemetadataextractor get_manifest --image-uri 772738948692.dkr.ecr.us-east-1.amazonaws.com/os_build_env:latest --region us-east-1 | jq . 
 ```
 
-**Output**:
+*Output*:
 ```json
 {
   "schemaVersion": 2,
@@ -200,7 +200,7 @@ ecrimagemetadataextractor get_manifest --image-uri 772738948692.dkr.ecr.us-east-
 ```shell
 ecrimagemetadataextractor get_digest_metadata --image-uri 772738948692.dkr.ecr.us-east-1.amazonaws.com/os_build_env:latest --region us-east-1 | jq .
 ```
-
+*Output*:
 ```json
 {
   "architecture": "amd64",
