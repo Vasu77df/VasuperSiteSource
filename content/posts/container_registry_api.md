@@ -314,4 +314,6 @@ Make sure you have the necessary ECR IAM credentials to pull layers and get imag
 
 In the future I might make this tool generic so that it can work with any public or private container registries, feel free to put in a pull request or fork this, if you are interested in extending this.
 
-Hopefully you learnt about the first few layers of the onions behind  a `docker pull` command and also how we could leverage some of the specifications, to get the SBOM of a container without needing to pull the entire image down or requiring the docker daemon or any other client.
+Hopefully you learnt about the first few layers of the onions behind  a `docker pull` command and also how we could leverage some of the specifications, to get details of a container without needing to pull the entire image down or requiring the docker daemon or any other client.
+
+-----
