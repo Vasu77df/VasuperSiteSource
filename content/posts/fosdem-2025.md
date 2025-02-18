@@ -14,7 +14,7 @@ FOSDEM is a free and non-commercial event organised by the community for the com
 
 My day to day involves in working with Linux, and maintaining a [Distribution](https://en.wikipedia.org/wiki/Linux_distribution) for my company and building new features for the distribution. FOSDEM is great conference for Linux builders and even users to learn about the latest greatest happening in the community. 
 
-I curated a list of talks, that I think is relevant to what I do, but I think these talks are relevant to any builder or system administrator, working with Linux.
+I curated a list of talks that I think are relevant to any builder or system administrator, working with Linux, especially for folks working in a similar problem space, as I am.
 
 ---
 
