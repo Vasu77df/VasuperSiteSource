@@ -1,6 +1,5 @@
 baseURL: "https://www.vasuper.net/"
 title: Vasu's Va-super's Blog
-paginate: 5
 theme: PaperMod
 
 enableRobotsTXT: true
