@@ -10,10 +10,16 @@ A tutorial I authored is finally available in the official AWS documentation!!
 
 - https://docs.aws.amazon.com/greengrass/v2/developerguide/gg-with-tpm-tutorial.html
 
+---
+
 **What is it about?**
+
 The tutorial shows process of stemming your AWS IoT Thing/Device's Certificates for your AWS Greengrass Nucleus against the Trusted Platform module chip available on a device that supports one.
 
+---
+
 **Why would one do this?**
+
 Let's take this scenario, your business operates a fleet of [Cloud native Endpoints](https://www.truesec.com/service/cloud-native-endpoints) (basically computer/devices that talk to the cloud).  This could be devices like point of sale systems, embedded devices, industrial PCs, any computer you probably see out in the wild that isn't a personal computer.
 
 A common mechanism such devices use to authenticate to a cloud control plane is a public key infrastructure standard called [x509](https://datatracker.ietf.org/wg/pkix/about/). 
@@ -30,6 +36,8 @@ In the tutorial above, I show how we can root a private and public key from the 
 
 If he steals the computer and has time to de-solder the chip and put it on a new computer, then you have physical security problem, I can't help you with that.
 
+---
+
 **What's the tech behind this?**
 
 While this tutorial is geared towards AWS IoT Greengrass (as I work there), steps 1-7 can be use for any public private key auth infrastructure for example WiFi that is authenticated with [EAP-TLS](https://github.com/tpm2-software/tpm2-pkcs11/blob/master/docs/EAP-TLS.md). The same instructions can be found in this link as well
@@ -45,6 +53,8 @@ This means if you re-provision your device and re-bootstrap your credentials you
 
 Fear not, I submitted a fix to the `tpm2_ptool`, that fixes the destroy command that will clear any keys on the TPM2 chip.
 - https://github.com/tpm2-software/tpm2-pkcs11/pull/883
+
+---
 
 Feed the tutorial to the nearest LLM, with these fixes, to create scripts that can automate the bootstrap and teardown process.
 
