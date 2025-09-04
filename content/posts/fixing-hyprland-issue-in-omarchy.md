@@ -1,8 +1,8 @@
 ---
 title: Fixing a hyprland shared library issue in omarchy
 date: 2025-09-03
-description: fixing libabsl shared library loading issue in hyprland in omarchy
-tags: ["TPM", "Trusted Compute", "systems", "AWS IoT", "AWS Greengrass"]
+description: A short story of fixing a shared library hyprland issue on omarchy
+tags: ["linux", "systems"]
 draft: false
 ---
 
