@@ -80,9 +80,9 @@ Sep 03 18:27:17 devone systemd[2341]: wayland-wm@hyprland.desktop.service: Main 
 Sep 03 18:27:17 devone systemd[2341]: wayland-wm@hyprland.desktop.service: Failed with result 'exit-code'.
 Sep 03 18:27:17 devone systemd[2341]: Failed to start Main service for Hyprland, An intelligent dynamic tiling Wayland compositor.
 Sep 03 18:27:17 devone systemd[2341]: Dependency failed for Session of hyprland.desktop Wayland compositor.
+```
 
 ## I think we found the problem?
-```
 
 Hmm, that seems like an error message could explain a blank screen. Quick google search the `libabsl` comes from the [abseil-cpp](https://github.com/abseil/abseil-cpp).
 
