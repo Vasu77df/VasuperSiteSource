@@ -7,9 +7,9 @@ draft: false
 ---
 
 
-I have been running [Omarchy](https://omarchy.org/) by the famous Ruby on Rails creator [dhh](https://x.com/dhh/) as my daily driver on my [dev-one](https://hpdevone.com/) for a couple of months now.
+I have been running [Omarchy](https://omarchy.org/) by the famous Ruby on Rails creator [dhh](https://x.com/dhh/) as my daily driver for a couple of months now.
 
-Coming over from [Bluefin](https://projectbluefin.io/) a [Fedora Silverblue](https://silverblue.fedoraproject.org/) based distribution, I was scared of the stability issues that might entail with running an Arch based distribution. Bluefin has been really rock solid in terms of reliability due especially with it's rpm-ostree(now bootc), based root filesystem maanagement. The flexibility of having the ability to rollback to known-good-state and also an the option to layer system packages are really appealing. That Bluefin was my daily ever since it's relaunch in [2024](https://www.ypsidanger.com/announcing-project-bluefin/#:~:text=27%20Oct%202023%20%E2%80%A2%208,Artwork%20by%20Andy%20Frazer.).
+Coming over from [Bluefin](https://projectbluefin.io/), a [Fedora Silverblue](https://silverblue.fedoraproject.org/) based distribution, I was scared of the stability issues that might entail, from running an Arch based distribution. Bluefin's reliability has been rock solid due to it's [rpm-ostree(now bootc)](https://docs.fedoraproject.org/en-US/bootc/rpm-ostree/) based root filesystem management. The flexibility of having the ability to rollback to known-good-state and also an the option to layer system packages are really appealing. That Bluefin was my daily ever since it's relaunch in [2024](https://www.ypsidanger.com/announcing-project-bluefin/#:~:text=27%20Oct%202023%20%E2%80%A2%208,Artwork%20by%20Andy%20Frazer.).
 
 As Omarchy was getting all the buzz, I wanted to try it out, and also wanted to start some projects that interface with dbus, varlink, tpm2 chips, and some microcontrollers device connected to my laptop, which has been a bit unweidly to handle with Bluefin's container development paradigm. Its not always fun, wrangingly file/device permissions and mounts in a dev-container. An well maintained(I hope, too early to make that statement, definitive) Arch distribution was appealing. 
 
@@ -80,6 +80,8 @@ Sep 03 18:27:17 devone systemd[2341]: wayland-wm@hyprland.desktop.service: Main 
 Sep 03 18:27:17 devone systemd[2341]: wayland-wm@hyprland.desktop.service: Failed with result 'exit-code'.
 Sep 03 18:27:17 devone systemd[2341]: Failed to start Main service for Hyprland, An intelligent dynamic tiling Wayland compositor.
 Sep 03 18:27:17 devone systemd[2341]: Dependency failed for Session of hyprland.desktop Wayland compositor.
+
+## I think we found the problem?
 ```
 
 Hmm, that seems like an error message could explain a blank screen. Quick google search the `libabsl` comes from the [abseil-cpp](https://github.com/abseil/abseil-cpp).
