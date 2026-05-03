@@ -5,7 +5,7 @@ draft: false
 ---
 
 # **Vasudevan Perumal** 
-[vasu3797@gmail.com](mailto:vasu3797@gmail.com) | [www.linkedin.com/in/vasuper](http://www.linkedin.com/in/vasuper) | 773-707-1927 | [vasuper.net](http://www.vasuper.net)  
+[vasu3797@gmail.com](mailto:vasu3797@gmail.com) | [www.linkedin.com/in/vasuper](http://www.linkedin.com/in/vasuper) | 773-707-1927 | [vasuper.net](https://vasuper.net)  
 
 ---
 ## **Experience**  
